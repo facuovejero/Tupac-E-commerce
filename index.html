@@ -1,247 +1,666 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <meta name="description" content="¡Hola y bienvenidos a TucuGol! El destino de elección para los Campeones del Mundo en busca de las camisetas de fútbol más destacadas. Aprovecha esta oportunidad inigualable y consigue la tuya.">
-    <meta name="keywords" content="Tucugol, gol, tucu, pelota, camiseta, futbol, messi, argentina, argentino, dibu, martinez, afa, guantes, botines">
-    <meta property="og:type" content="Venta de articulos deportivos">
-    <meta property="og:title" content="TUPAC">
-    <meta property="og:description" content="Descubre TucuGol, el sitio ideal para los fanáticos del fútbol. Aquí encontrarás las camisetas más destacadas para los verdaderos Campeones del Mundo. ¡Aprovecha esta oportunidad única y consigue la tuya hoy mismo!">
-    <meta property="og:url" content="https://comi-tucugol.netlify.app/">
-    <meta property="og:image" content="./img/logo-tucugol.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TUPAC &amp; ASOCIADOS - Maqueta</title>
+    <style>
+        /* Paleta de colores TUPAC & ASOCIADOS */
+        .color1 {
+            color: #f20b08;
+        }
 
-    <title>TucuGol</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/estilos.css">
+        .bg-color1 {
+            background-color: #f20b08;
+        }
+
+        .color2 {
+            color: #f0988c;
+        }
+
+        .bg-color2 {
+            background-color: #f0988c;
+        }
+
+        .color3 {
+            color: #640a09;
+        }
+
+        .bg-color3 {
+            background-color: #640a09;
+        }
+
+        .color4 {
+            color: #a87c58;
+        }
+
+        .bg-color4 {
+            background-color: #a87c58;
+        }
+
+        .color5 {
+            color: #b49e98;
+        }
+
+        .bg-color5 {
+            background-color: #b49e98;
+        }
+
+        /* Reset + base */
+        :root {
+            --accent: #0b6efd;
+            --muted: #666;
+            --card: #fff;
+            --bg: #f5f7fb
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            color: #111
+        }
+
+        header {
+            background: linear-gradient(90deg, rgba(11, 110, 253, 0.95), rgba(5, 65, 170, 0.95));
+            color: #fff;
+            padding: 12px 16px;
+            position: sticky;
+            top: 0;
+            z-index: 40
+        }
+
+        .nav {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: 0.6px
+        }
+
+        .controls {
+            display: flex;
+            gap: 8px;
+            align-items: center
+        }
+
+        .search {
+            display: flex;
+            gap: 6px;
+            align-items: center
+        }
+
+        input[type=text],
+        select {
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.12)
+        }
+
+        button {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 8px 10px;
+            border-radius: 8px;
+            cursor: pointer
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 18px auto;
+            padding: 0 12px
+        }
+
+        /* Carousel */
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #ddd
+        }
+
+        .slides {
+            display: flex;
+            transition: transform .6s ease
+        }
+
+        .slide {
+            min-width: 100%;
+            padding: 28px;
+            display: flex;
+            align-items: center;
+            gap: 20px
+        }
+
+        .slide img {
+            width: 40%;
+            max-width: 420px;
+            border-radius: 12px;
+            object-fit: cover
+        }
+
+        .slide .copy {
+            flex: 1;
+            color: #fff
+        }
+
+        .slide h2 {
+            margin: 0 0 8px;
+            font-size: clamp(18px, 3vw, 28px)
+        }
+
+        .carousel .dots {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 10px;
+            display: flex;
+            gap: 6px
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            cursor: pointer
+        }
+
+        .dot.active {
+            background: #fff
+        }
+
+        /* Grid categories */
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin-top: 18px
+        }
+
+        .cat {
+            background: var(--card);
+            padding: 14px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(10, 10, 10, 0.06);
+            text-align: center
+        }
+
+        /* Products area */
+        .toolbar {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 18px 0
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px
+        }
+
+        .card {
+            background: var(--card);
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(5, 20, 50, 0.04);
+            display: flex;
+            flex-direction: column
+        }
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px
+        }
+
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8px
+        }
+
+        .price {
+            font-weight: 700
+        }
+
+        .muted {
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        .badge-out {
+            background: #ddd;
+            color: #444;
+            padding: 6px;
+            border-radius: 8px;
+            font-weight: 600
+        }
+
+        /* Product modal fallback (opens new tab) */
+        @media (max-width:640px) {
+            .slide img {
+                display: none
+            }
+
+            header {
+                padding: 8px
+            }
+
+            .nav {
+                gap: 8px
+            }
+        }
+
+        footer {
+            max-width: 1200px;
+            margin: 18px auto;
+            padding: 12px;
+            color: var(--muted)
+        }
+
+        /* Admin alerts */
+        .admin-box {
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.06)
+        }
+    </style>
+    <style>
+        .color1 {
+            color: #bc7c54;
+        }
+
+        .color2 {
+            color: #d9b69f;
+        }
+
+        .color3 {
+            color: #641c0c;
+        }
+
+        .color4 {
+            color: #a6785d;
+        }
+
+        .color5 {
+            color: #c8c8bc;
+        }
+
+        .bg-color1 {
+            background-color: #bc7c54;
+        }
+
+        .bg-color2 {
+            background-color: #d9b69f;
+        }
+
+        .bg-color3 {
+            background-color: #641c0c;
+        }
+
+        .bg-color4 {
+            background-color: #a6785d;
+        }
+
+        .bg-color5 {
+            background-color: #c8c8bc;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <section class="navbar-container">
-            <nav class="navbar">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="./index.html"><img src="./img/logo-tucugol.png"
-                            alt="logo de la pagina" class="imagenes"></a>
-                    <h1>TUPAC</h1>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                        aria-labelledby="offcanvasDarkNavbarLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">TUCUGOL</h5>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="./pages/cuenta.html">Log In</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./index.html">Inicio</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="../index.html" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        Sobre Nosotros
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-dark">
-                                        <li><a class="dropdown-item" href="./pages/productos.html">Productos</a></li>
-                                        <li><a class="dropdown-item" href="./pages/servicios.html">Servicios</a></li>
-                                        <li><a class="dropdown-item" href="./pages/nosotros.html">Nosotros</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="./pages/contacto.html">Contacto</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <form class="d-flex mt-3" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="search">
-                                <button class="btn btn-success" type="submit">Buscar</button>
-                            </form>
-                        </div>
-                    </div>
+        <div class="nav">
+            <div style="display:flex;align-items:center;gap:12px">
+                <div class="brand">TUPAC &amp; ASOCIADOS</div>
+                <div class="muted" style="font-size:13px">Maqueta responsive • JS + HTML + CSS</div>
+            </div>
+            <div class="controls">
+                <div class="search">
+                    <input id="searchInput" type="text" placeholder="Buscar productos..." aria-label="buscar" />
+                    <select id="categoryFilter">
+                        <option value="all">Todas las categorías</option>
+                    </select>
+                    <select id="sortSelect">
+                        <option value="relevance">Relevancia</option>
+                        <option value="priceAsc">Precio ↑</option>
+                        <option value="priceDesc">Precio ↓</option>
+                    </select>
+                    <button id="searchBtn">Buscar</button>
                 </div>
-            </nav>
-        </section>
+                <button id="cartBtn">Carrito (<span id="cartCount">0</span>)</button>
+            </div>
+        </div>
     </header>
-    <main class="cuerpo-page">
-        <section class="fdj"><!--!Bienvenida-->
-            <!--<img src="./img/fondo-2.jpg" alt="Fondo con Jugadores">--> 
-        <div>
-            <p>Bienvenidos a TucuGol, 
-                La pagina donde compran los Campeones del Mundo las mejores camisetas de futbol,
-                no te quedes sin esta oportunidad.</p>
-            <a href="#compra" class="button">Comprar Aqui</a>
-        </div>
+
+    <main>
+        <!-- Carousel / Cabecera -->
+        <section class="carousel" id="carousel">
+            <div class="slides" id="slides"></div>
+            <div class="dots" id="dots"></div>
         </section>
-        <div id="compra" class="buy"><!--!camisetas-->
-            <h2>Camisetas De Futbol</h2>
-            <p>Comprá camisetas de fútbol del futbol argentino oficiales y seguí apoyando a tu equipo favorito</p>
+
+        <!-- Categories -->
+        <section class="categories" id="categories"></section>
+
+        <!-- Toolbar and products -->
+        <div class="toolbar">
+            <div class="muted">Mostrando <span id="resultCount">0</span> productos</div>
+            <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+                <label class="muted">Email (para carrito):</label>
+                <input id="emailInput" type="text" placeholder="ejemplo@mail.com"
+                    style="padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.12)" />
+                <button id="saveEmail">Guardar</button>
+            </div>
         </div>
-        <div class="buy2">
-            <section class="club">
-                <div class="cami-1">
-                    <img src="./img/river-camiseta.png" alt="Camiseta de River Plate">
-                    <h3>Camiseta de River Plate</h3>
-                    <p>$ 79.999</p>
-                    <a href="#" class="button">Comprar</a>
+
+        <section class="products" id="productGrid"></section>
+
+        <!-- Admin panel -->
+        <section style="margin-top:18px;display:grid;grid-template-columns:1fr 300px;gap:12px;align-items:start">
+            <div class="admin-box">
+                <h3>Panel Admin (simulado)</h3>
+                <p class="muted">Aquí se muestran alertas cuando el stock baja del umbral configurado.</p>
+                <div id="adminAlerts"></div>
+            </div>
+            <div class="admin-box">
+                <h4>Configuración</h4>
+                <label class="muted">Umbral notificación stock:</label>
+                <input id="lowStockThreshold" type="number" value="3"
+                    style="width:80px;padding:6px;margin-top:6px;border-radius:6px;border:1px solid rgba(0,0,0,0.12)" />
+                <div style="margin-top:10px">
+                    <button id="simulateSale">Simular venta (reducir stock de 1 producto)</button>
                 </div>
-                <div class="cami-2">
-                    <img src="./img/boca-camiseta.png" alt="Camiseta de Boca Juniors">
-                    <h3>Camiseta de Boca Juniors</h3>
-                    <p>$ 79.999</p>
-                    <a href="#" class="button">Comprar</a>
-                </div>
-                <div class="cami-3">
-                    <img src="./img/adidas Oficial Argentina - Cuotas sin interés _ Ropa Deportiva - Google Chrome 13_06_2024 18_53_47.png"
-                        alt="Camiseta de la Seleccion Argentina">
-                    <h3>Camiseta de Argentina</h3>
-                    <p>$ 79.999</p>
-                    <a href="#" class="button">Comprar</a>
-                </div>
-                <div class="cami-4">
-                    <img src="./img/argentina-atletico-tucuman-jersey-2021-1.png" alt="Camiseta de Atletico Tucuman">
-                    <h3>Camiseta de Atl. Tucuman</h3>
-                    <p>$ 79.999</p>
-                    <a href="#" class="button">Comprar</a>
-                </div>
-            </section>
-        </div>
-            <section class="vdo"><!--!fondo y video-->
-                <div class="caja-1">
-                    <img src="./img/botines fondo.jpeg" alt="fondo de botines">
-                </div>
-                <div class="text">
-                    <p>Descubre por qué somos la mejor opción para botines en Argentina.</p>
-                    <a href="#Botines" class="button">Comprar Aqui</a>
-                </div>
-            </section>
-            <section id="Botines">
-            <section id="Botines" class="text-container">
-                <h2>Botines de futbol</h2>
-                <p>Los mejores botines para que demuestres todo tu talento</p>
-            </section>
-            <section class="btns"><!--?botines-->
-                <div>
-                    <img src="./img/botines.png" alt="botines adidas">
-                    <h3>Botin adidas Predator</h3>
-                    <p>$380,592</p>
-                    <a href="#" class="button">Comprar</a>
-                </div>
-                <div>
-                    <img src="./img/botines-2.png" alt="botines COPA">
-                    <h3>BOTINES COPA PURE II</h3>
-                    <p>$ 149.999</p>
-                    <a href="#" class="button">Comprar</a>
-                </div>
-                <div>
-                    <img src="./img/botines-3.png" alt="botines CRAZYFAST">
-                    <h3>BOTINES X CRAZYFAST LEAGUE</h3>
-                    <p>$ 149.999</p>
-                    <a href="#" class="button">Comprar</a>
-                </div>
-                <div>
-                    <img src="./img/botines-4.png" alt="botines MESSI">
-                    <h3>BOTINES X CRAZYFAST MESSI</h3>
-                    <p>$ 149.999</p>
-                    <a href="#" class="button">Comprar</a>
-                </div>
-            </section>
-            <section class="carouselm">
-                <div id="carouselExampleCaptions" class="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./img/botines-de-messi-mundial.jpg" class="d-block w-100"
-                                alt="botines-de-messi-mundial">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Botines Messi Crazyfast</h5>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./img/botines-fnd.jpg" class="d-block w-100" alt="botines-de-futbol">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Botines Nike edición Neymar</h5>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./img/botines-de-messi.jpg" class="d-block w-100" alt="botines-de-futbol-messi">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Botines Messi 2015 X</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </section>
+            </div>
+        </section>
+
     </main>
-<footer id="contactos" class="pie-page">
-    <section class="foot-page">
-        <section class="letter-container">
-            <a href="#inicio"><img src="./img/logo-tucugol.png" alt="logo-tucugol"></a>
-            <ul class="abajo">
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Asistencia</a></li>
-                <li><a href="#">Colecciones</a></li>
-                <li><a href="#">Informacion de la empresa</a></li>
-                <li><a href="#">Tiendas</a></li>
-            </ul>
-        </section>
-    <section class="end">
-        <section class="map-container">
-            <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.9910599999366!2d-58.44680992425981!3d-34.604387572954046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca0d95ad77f5%3A0xdd0be977332b24c6!2sAntezana%20247%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1721084852402!5m2!1ses-419!2sar" width="250" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <h6>Sede en Antezana 247, CABA</h6>
-            </div>
-        </section>
-        <section class="icon-container">
-            <div class="follow">          
-                <p>siguenos</p>
-            </div>
-            <div class="wpp">
-                <a href="https://wa.me/+541124987017" target="_blank"><img src="./img/whatsapp.png" alt="whatsapp"></a>
-            </div>
-            <div class="face">
-                <a href="https://www.facebook.com/profile.php?id=61560651121790" target="_blank"><img src="./img/facebook.png" alt="facebook"></a>
-            </div>
-            <div class="ig">
-                <a href="https://www.instagram.com/tucugol.ok?igsh=MWdwbTA5NDgwdGJxcA==" target="_blank"><img src="./img/instagram.png" alt="instagram"></a>
-            </div>
-            <div class="tiktok">
-                <a href="#"><img src="./img/tik-tok.png" alt="tik-tok"></a>
-            </div>
-        </section>
-    </section>
-</section>
+
+    <footer>
+        Maqueta de tienda &middot; diseño responsive para celulares. Esta demo no realiza pagos reales; la persistencia
+        usa <code>localStorage</code>.
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+
+    <script>
+        /*************** DATOS (ejemplo) ***************/
+        const PRODUCTS = [
+            { id: 'p1', name: 'Campera Urbana', category: 'Indumentaria', price: 12999, stock: 5, sizes: ['S', 'M', 'L', 'XL'], images: ['https://picsum.photos/seed/p1a/800/600', 'https://picsum.photos/seed/p1b/800/600'], models: ['https://modelviewer.dev/shared-assets/models/Astronaut.glb'], colors: [{ name: 'Negro', preview: 'https://picsum.photos/seed/p1c/400/400' }, { name: 'Gris', preview: 'https://picsum.photos/seed/p1d/400/400' }], featured: true, summary: 'Campera urbana, resistente al agua.' },
+            { id: 'p2', name: 'Zapatillas Runner', category: 'Calzado', price: 8799, stock: 2, sizes: [38, 39, 40, 41, 42], images: ['https://picsum.photos/seed/p2a/800/600', 'https://picsum.photos/seed/p2b/800/600'], models: [], colors: [{ name: 'Blanco', preview: 'https://picsum.photos/seed/p2c/400/400' }], featured: true, summary: 'Zapatillas para running con buena amortiguación.' },
+            { id: 'p3', name: 'Remera Básica', category: 'Indumentaria', price: 2599, stock: 0, sizes: ['S', 'M', 'L'], images: ['https://picsum.photos/seed/p3a/800/600'], models: [], colors: [{ name: 'Blanco', preview: 'https://picsum.photos/seed/p3b/400/400' }, { name: 'Negro', preview: 'https://picsum.photos/seed/p3c/400/400' }], featured: false, summary: 'Remera algodón 100%.' },
+            { id: 'p4', name: 'Mochila Compacta', category: 'Accesorios', price: 4999, stock: 10, sizes: [], images: ['https://picsum.photos/seed/p4a/800/600'], models: ['https://modelviewer.dev/shared-assets/models/RobotExpressive.glb'], colors: [{ name: 'Azul', preview: 'https://picsum.photos/seed/p4b/400/400' }], featured: true, summary: 'Mochila ideal para el día a día.' }
+        ];
+
+        /*************** ESTADO ***************/
+        let state = { products: [], categories: [], featured: [], cartEmail: '', cart: {} };
+
+        /*************** UTILIDADES ***************/
+        function $(id) { return document.getElementById(id) }
+
+        function saveCartToStorage(email) {
+            if (!email) return;
+            localStorage.setItem('cart_' + email, JSON.stringify(state.cart));
+        }
+        function loadCartFromStorage(email) {
+            const data = localStorage.getItem('cart_' + email);
+            state.cart = data ? JSON.parse(data) : {};
+            updateCartCount();
+        }
+        function addAdminAlert(msg) {
+            const alerts = JSON.parse(localStorage.getItem('adminAlerts') || '[]');
+            alerts.unshift({ msg, at: new Date().toISOString() });
+            localStorage.setItem('adminAlerts', JSON.stringify(alerts));
+            renderAdminAlerts();
+            console.warn('ALERTA ADMIN:', msg);
+        }
+
+        /*************** RENDER BÁSICO ***************/
+        function init() {
+            // clone data
+            state.products = PRODUCTS.map(p => ({ ...p }));
+            state.categories = Array.from(new Set(state.products.map(p => p.category)));
+            state.featured = state.products.filter(p => p.featured);
+
+            // populate filters
+            const catSelect = $('categoryFilter');
+            state.categories.forEach(c => { const opt = document.createElement('option'); opt.value = c; opt.textContent = c; catSelect.appendChild(opt) });
+
+            // build carousel
+            renderCarousel();
+            renderCategories();
+            renderProducts();
+            renderAdminAlerts();
+
+            // event handlers
+            $('searchBtn').onclick = () => renderProducts();
+            $('sortSelect').onchange = () => renderProducts();
+            $('categoryFilter').onchange = () => renderProducts();
+            $('saveEmail').onclick = () => { const em = $('emailInput').value.trim(); if (em) { state.cartEmail = em; localStorage.setItem('cartEmail', em); loadCartFromStorage(em); alert('Email guardado. Los productos del carrito se asociarán a: ' + em) } else alert('Ingresa un email válido') };
+            $('cartBtn').onclick = () => openCartWindow();
+            $('simulateSale').onclick = () => simulateSale();
+            $('lowStockThreshold').onchange = () => localStorage.setItem('lowStockThreshold', $('lowStockThreshold').value);
+
+            // restore saved email
+            const saved = localStorage.getItem('cartEmail'); if (saved) { $('emailInput').value = saved; state.cartEmail = saved; loadCartFromStorage(saved) }
+
+            // auto-advance carousel
+            setInterval(() => advanceCarousel(), 4500);
+        }
+
+        /* Carousel */
+        let currentSlide = 0;
+        function renderCarousel() {
+            const slidesEl = $('slides'); const dotsEl = $('dots'); slidesEl.innerHTML = ''; dotsEl.innerHTML = '';
+            state.featured.forEach((p, i) => {
+                const s = document.createElement('div'); s.className = 'slide';
+                s.innerHTML = `
+          <img src="${p.images[0]}" alt="${p.name}" />
+          <div class="copy">
+            <h2>${p.name}</h2>
+            <p class="muted">${p.summary}</p>
+            <p style="margin-top:8px"><strong>$ ${p.price.toLocaleString()}</strong></p>
+            <div style="margin-top:12px"><button onclick="openProduct('${p.id}')">Ver producto</button></div>
+          </div>
+        `;
+                slidesEl.appendChild(s);
+                const dot = document.createElement('div'); dot.className = 'dot'; if (i === 0) dot.classList.add('active'); dot.onclick = () => { goToSlide(i) }; dotsEl.appendChild(dot);
+            });
+            updateCarouselTransform();
+        }
+        function updateCarouselTransform() {
+            $('slides').style.transform = `translateX(-${currentSlide * 100}%)`;
+            Array.from($('dots').children).forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+        }
+        function advanceCarousel() {
+            if (state.featured.length === 0) return;
+            currentSlide = (currentSlide + 1) % state.featured.length; updateCarouselTransform();
+        }
+        function goToSlide(i) { currentSlide = i; updateCarouselTransform(); }
+
+        /* Categories */
+        function renderCategories() {
+            const el = $('categories'); el.innerHTML = '';
+            state.categories.forEach(c => {
+                const d = document.createElement('div'); d.className = 'cat'; d.innerHTML = `<strong>${c}</strong><div class="muted" style="margin-top:6px">Productos: ${state.products.filter(p => p.category === c).length}</div>`;
+                d.onclick = () => { $('categoryFilter').value = c; renderProducts(); window.scrollTo({ top: 220, behavior: 'smooth' }); };
+                el.appendChild(d);
+            });
+        }
+
+        /* Productos */
+        function renderProducts() {
+            const q = $('searchInput').value.trim().toLowerCase();
+            const cat = $('categoryFilter').value;
+            const sort = $('sortSelect').value;
+            let list = state.products.slice();
+            if (cat !== 'all') list = list.filter(p => p.category === cat);
+            if (q) list = list.filter(p => p.name.toLowerCase().includes(q) || (p.summary || '').toLowerCase().includes(q));
+            if (sort === 'priceAsc') list.sort((a, b) => a.price - b.price);
+            if (sort === 'priceDesc') list.sort((a, b) => b.price - a.price);
+            $('resultCount').textContent = list.length;
+            const grid = $('productGrid'); grid.innerHTML = '';
+            list.forEach(p => {
+                const c = document.createElement('article'); c.className = 'card';
+                c.innerHTML = `
+          <img src="${p.images[0]}" alt="${p.name}" />
+          <h4 style="margin:10px 0 6px">${p.name}</h4>
+          <div class="meta"><div class="muted">${p.category}</div><div class="price">$ ${p.price.toLocaleString()}</div></div>
+          <div style="margin-top:10px;display:flex;gap:8px;align-items:center"> 
+            <button onclick="openProduct('${p.id}')">Abrir</button>
+            <button onclick="quickAdd('${p.id}')">Agregar</button>
+            ${p.stock > 0 ? '<div class="muted">Stock: ' + p.stock + '</div>' : '<div class="badge-out">SIN STOCK</div>'}
+          </div>
+        `;
+                grid.appendChild(c);
+            });
+        }
+
+        /* Producto - nueva pestaña */
+        function openProduct(id) {
+            // create a new window with product detail (data passed via sessionStorage to avoid large query strings)
+            const w = window.open('product.html', '_blank');
+            // store the product id temporarily
+            sessionStorage.setItem('tupac_open_product', id);
+            if (!w) alert('Popup bloqueado: permite abrir nuevas pestañas para ver la ficha del producto.');
+        }
+
+        /* Quick add to cart */
+        function quickAdd(id) {
+            const prod = state.products.find(p => p.id === id);
+            if (!prod) return alert('Producto no encontrado');
+            if (prod.stock <= 0) return alert('Este producto está fuera de stock');
+            if (!state.cartEmail) { return alert('Guarda tu email en la parte superior para asociar el carrito'); }
+            state.cart[id] = (state.cart[id] || 0) + 1;
+            saveCartToStorage(state.cartEmail);
+            updateCartCount();
+            // decrease stock in catalogue (demo)
+            prod.stock -= 1;
+            renderProducts();
+            checkLowStock(prod);
+            alert('Producto agregado al carrito');
+        }
+
+        function updateCartCount() {
+            const count = Object.values(state.cart).reduce((s, n) => s + n, 0);
+            $('cartCount').textContent = count;
+        }
+
+        /* Cart window */
+        function openCartWindow() {
+            const em = state.cartEmail;
+            if (!em) return alert('Ingresa y guarda tu email para ver tu carrito');
+            const cartData = { email: em, items: state.cart };
+            sessionStorage.setItem('tupac_cart', JSON.stringify(cartData));
+            const w = window.open('cart.html', '_blank');
+            if (!w) alert('Popup bloqueado: permite abrir nuevas pestañas para ver el carrito.');
+        }
+
+        /* Low stock alerts */
+        function checkLowStock(prod) {
+            const threshold = Number(localStorage.getItem('lowStockThreshold') || $('lowStockThreshold').value || 3);
+            if (prod.stock <= threshold) { addAdminAlert(`Stock bajo para ${prod.name} (id:${prod.id}) — queda ${prod.stock}`); }
+        }
+
+        /* Simulación de venta vía admin */
+        function simulateSale() {
+            // reduce stock of first product with stock>0
+            const p = state.products.find(x => x.stock > 0);
+            if (!p) return alert('No hay productos con stock positivo para simular venta');
+            p.stock -= 1; renderProducts(); addAdminAlert(`Venta simulada: ${p.name} (id:${p.id}) — nuevo stock ${p.stock}`); checkLowStock(p);
+        }
+
+        function renderAdminAlerts() {
+            const el = $('adminAlerts'); const arr = JSON.parse(localStorage.getItem('adminAlerts') || '[]');
+            el.innerHTML = arr.slice(0, 8).map(a => `<div style="padding:8px;border-bottom:1px solid rgba(0,0,0,0.04)"><small class="muted">${new Date(a.at).toLocaleString()}</small><div>${a.msg}</div></div>`).join('') || '<div class="muted">Sin alertas</div>';
+        }
+
+        /* Persist low threshold default */
+        if (!localStorage.getItem('lowStockThreshold')) localStorage.setItem('lowStockThreshold', 3);
+        $('lowStockThreshold').value = localStorage.getItem('lowStockThreshold');
+
+        // initialize
+        init();
+
+        /*************** Código para product.html y cart.html (generado dinámicamente) ***************/
+        // We'll create simple pages when opened via window.open: product.html and cart.html
+        // If page detects pathname '/product.html' it will render product info from sessionStorage
+        if (location.pathname.endsWith('/product.html') || location.pathname.endsWith('product.html')) {
+            document.body.innerHTML = '<main style="max-width:900px;margin:18px auto;padding:12px"><div id="productRoot"></div></main>';
+            const pid = sessionStorage.getItem('tupac_open_product');
+            const prod = (PRODUCTS.find(p => p.id === pid) || {});
+            if (!pid) { document.getElementById('productRoot').innerHTML = '<p>No se encontró producto (token expirado). Vuelve a abrir desde la página principal.</p>'; }
+            else {
+                const root = document.getElementById('productRoot');
+                root.innerHTML = `
+          <a href="" onclick="window.close();return false;">&larr; Volver</a>
+          <h1>${prod.name}</h1>
+          <div style="display:grid;grid-template-columns:1fr 320px;gap:12px">
+            <div>
+              ${prod.images.map(src => `<img src="${src}" style="width:100%;border-radius:8px;margin-bottom:8px;max-height:320px;object-fit:cover">`).join('')}
+              ${prod.models && prod.models.length ? '<h4>Render 3D</h4>' : ''}
+              ${prod.models && prod.models.length ? prod.models.map(m => `<model-viewer src="${m}" alt="modelo 3d" camera-controls style="width:100%;height:320px"></model-viewer>`).join('') : ''}
+            </div>
+            <aside style="background:#fff;padding:12px;border-radius:8px">
+              <p class="muted">Categoría: ${prod.category}</p>
+              <p><strong>$ ${prod.price?.toLocaleString() || '--'}</strong></p>
+              <p class="muted">Stock: ${prod.stock}</p>
+              <p>${prod.summary}</p>
+              ${prod.sizes && prod.sizes.length ? '<label>Talles disponibles</label><div style="display:flex;gap:6px;margin:8px 0">' + prod.sizes.map(s => `<button onclick="selectSize(\'${s}\')">${s}</button>`).join('') + '</div>' : ''}
+              ${prod.colors && prod.colors.length ? '<label>Colores</label><div style="display:flex;gap:6px;margin:8px 0">' + prod.colors.map(c => `<div style="text-align:center"><img src="${c.preview}" style="width:48px;height:48px;border-radius:6px;display:block"><small>${c.name}</small></div>`).join('') + '</div>' : ''}
+              <div style="margin-top:10px"><input id="detailEmail" placeholder="tu@mail.com" style="padding:8px;border-radius:6px;border:1px solid rgba(0,0,0,0.12);width:100%"></div>
+              <div style="margin-top:10px;display:flex;gap:8px"><button id="buyBtn">Agregar al carrito</button><button onclick="window.close()">Seguir comprando</button></div>
+              <div style="margin-top:10px" id="detailMsg"></div>
+            </aside>
+          </div>
+        `;
+                // load model-viewer lib if needed
+                if (prod.models && prod.models.length) { const s = document.createElement('script'); s.src = 'https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js'; document.head.appendChild(s); }
+
+                window.selectSize = function (s) { alert('Talle seleccionado: ' + s); }
+                document.getElementById('buyBtn').onclick = () => {
+                    const em = document.getElementById('detailEmail').value.trim();
+                    if (!em) return document.getElementById('detailMsg').innerHTML = '<span class="muted">Ingresa un email para asociar el carrito</span>';
+                    const cartKey = 'cart_' + em; const data = JSON.parse(localStorage.getItem(cartKey) || '{}'); data[prod.id] = (data[prod.id] || 0) + 1; localStorage.setItem(cartKey, JSON.stringify(data)); document.getElementById('detailMsg').innerHTML = '<div style="color:green">Agregado al carrito (no reserva)</div>';
+                    // decrease stock in main PRODUCTS copy (only affects this window) and add alert
+                    prod.stock = Math.max(0, (prod.stock || 0) - 1);
+                    if (prod.stock === 0) document.getElementById('detailMsg').innerHTML += '<div class="muted">Este producto ahora figura como <strong>SIN STOCK</strong></div>';
+                    // admin alert
+                    const threshold = Number(localStorage.getItem('lowStockThreshold') || 3);
+                    if (prod.stock <= threshold) { const alerts = JSON.parse(localStorage.getItem('adminAlerts') || '[]'); alerts.unshift({ msg: 'Stock bajo para ' + prod.name + ' (detalle)', at: new Date().toISOString() }); localStorage.setItem('adminAlerts', JSON.stringify(alerts)); }
+                }
+            }
+        }
+
+        if (location.pathname.endsWith('/cart.html') || location.pathname.endsWith('cart.html')) {
+            document.body.innerHTML = '<main style="max-width:900px;margin:18px auto;padding:12px"><div id="cartRoot"></div></main>';
+            const cartData = JSON.parse(sessionStorage.getItem('tupac_cart') || 'null');
+            const root = document.getElementById('cartRoot');
+            if (!cartData) root.innerHTML = '<p>No hay carrito guardado.</p>';
+            else {
+                const items = cartData.items; const em = cartData.email;
+                const lines = Object.keys(items).map(id => { const p = PRODUCTS.find(x => x.id === id); return `<div style="display:flex;gap:12px;align-items:center;padding:8px;background:#fff;border-radius:8px;margin-bottom:8px"><img src="${p?.images?.[0] || ''}" style="width:80px;height:60px;object-fit:cover;border-radius:6px"><div><strong>${p?.name || id}</strong><div class="muted">Cantidad: ${items[id]}</div><div class="muted">$ ${(p?.price || 0).toLocaleString()}</div></div></div>` }).join('');
+                root.innerHTML = `<a href="" onclick="window.close();return false;">&larr; Volver</a><h2>Carrito de ${em}</h2>${lines}<div style="margin-top:12px"><button onclick="alert('Demo: no hay pago implementado')">Continuar a pagar</button></div>`;
+            }
+        }
+
+    </script>
 </body>
 
 </html>

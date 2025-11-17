@@ -1,0 +1,857 @@
+/* INDEX **/
+@media screen and (max-width:1068px) {
+    .cuerpo-page {
+        .btns {
+            h3 {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1043px) {
+    .cuerpo-page {
+        .caja-1 {
+            img {
+                width: 680px;
+                height: 394px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1023px) {
+    .caja-1 {
+        img {
+            width: 640px !important;
+            height: 394px !important;
+        }
+    }
+}
+
+@media screen and (max-width:1013px) {
+    .caja-1 {
+        img {
+            width: 660px;
+        }
+    }
+}
+
+@media screen and (max-width:986px) {
+    .cuerpo-page {
+        .club {
+            h3 {
+                font-size: 24px !important;
+            }
+        }
+
+        .btns {
+            h3 {
+                font-size: 24px !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:948px) {
+    .cuerpo-page {
+        .club {
+            margin: 0px;
+            padding: 5px;
+            display: grid !important;
+            grid-auto-columns: 1fr;
+            grid-auto-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 7px 13px;
+            grid-template-areas:
+                "cami-1 cami-2"
+                "cami-3 cami-4";
+            justify-content: center;
+            align-content: center;
+            justify-items: center;
+            align-items: stretch;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cami-1 {
+            grid-area: cami-1;
+        }
+
+        .cami-2 {
+            grid-area: cami-2;
+        }
+
+        .cami-3 {
+            grid-area: cami-3;
+        }
+
+        .cami-4 {
+            grid-area: cami-4;
+        }
+
+        .btns {
+            margin: 0px;
+            padding: 5px;
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-auto-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 7px 13px;
+            grid-template-areas:
+                "botin-1 botin-2"
+                "botin-3 botin-4";
+            justify-content: center;
+            align-content: center;
+            justify-items: center;
+            align-items: stretch;
+            width: 100%;
+            height: 100%;
+        }
+
+        .botin-1 {
+            grid-area: botin-1;
+        }
+
+        .botin-2 {
+            grid-area: botin-2;
+        }
+
+        .botin-3 {
+            grid-area: botin-3;
+        }
+
+        .botin-4 {
+            grid-area: botin-4;
+        }
+    }
+
+    .caja-1 {
+        img {
+            width: 640px;
+            height: 394px;
+        }
+    }
+}
+
+@media screen and (max-width:926px) {
+    .caja-1 {
+        img {
+            width: 630px;
+            height: 394px;
+        }
+    }
+}
+
+@media screen and (max-width:843px) {
+    .caja-1 {
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 580px !important;
+            height: 370px !important;
+        }
+    }
+}
+
+@media screen and (max-width:827px) {
+    .carousel {
+        width: 700px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:806px) {
+    .carousel {
+        width: 600px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:783px) {
+    .caja-1 {
+        img {
+            width: 550px !important;
+            height: 394px;
+        }
+    }
+}
+
+@media screen and (max-width:753px) {
+    .caja-1 {
+        img {
+            width: 530px !important;
+            height: 365px !important;
+        }
+    }
+}
+
+@media screen and (max-width:745px) {
+    .foot-page {
+        font-size: 40px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .letter-container {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .end {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .icon-container {
+        font-size: 30px;
+        margin: 7px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width:735px) {
+    .cuerpo-page {
+        .club {
+            height: 50% !important;
+            margin-bottom: 20px;
+
+            div {
+                width: 80% !important;
+                height: 100% !important;
+            }
+
+            img {
+                width: 70% !important;
+                height: 60% !important;
+            }
+        }
+
+        .btns {
+            height: 50%;
+            margin-bottom: 20px;
+
+            div {
+                width: 80%;
+                height: 100%;
+            }
+
+            img {
+                width: 70%;
+                height: 60%;
+            }
+        }
+
+
+
+        .vdo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .caja-1 {
+            border-right: none;
+
+            img {
+                width: 100% !important;
+                height: 394px;
+            }
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text p {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width:730px) {
+    .foot-page {
+        width: 500px !important;
+        height: 50% !important;
+    }
+
+    .map-container {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        .carousel {
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        .carousel {
+            width: 80%;
+        }
+
+
+        .carouselm {
+            img {
+                width: 80%;
+                height: 70% !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 591px) {
+    main {
+        .btns {
+            h3 {
+                font-size: 20px;
+            }
+        }
+
+        .club {
+            h3 {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 551px) {
+    .foot-page {
+        width: 400px !important;
+        height: 50% !important;
+    }
+
+    .cuerpo-page {
+        .club {
+            display: grid !important;
+            grid-auto-columns: 1fr;
+            grid-auto-rows: 1fr;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 8px 4px;
+            grid-template-areas:
+                "cami-1"
+                "cami-2"
+                "cami-3"
+                "cami-4";
+            justify-content: center;
+            align-content: center;
+            justify-items: center;
+            align-items: stretch;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cami-1 {
+            grid-area: cami-1;
+        }
+
+        .cami-2 {
+            grid-area: cami-2;
+        }
+
+        .cami-3 {
+            grid-area: cami-3;
+        }
+
+        .cami-4 {
+            grid-area: cami-4;
+        }
+
+        .btns {
+            display: grid !important;
+            grid-auto-columns: 1fr;
+            grid-auto-rows: 1fr;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 8px 4px;
+            grid-template-areas:
+                "botin-1"
+                "botin-2"
+                "botin-3"
+                "botin-4";
+            justify-content: center;
+            align-content: center;
+            justify-items: center;
+            align-items: stretch;
+            width: 100%;
+            height: 80%;
+        }
+
+        .botin-1 {
+            grid-area: botin-1;
+        }
+
+        .botin-2 {
+            grid-area: botin-2;
+        }
+
+        .botin-3 {
+            grid-area: botin-3;
+        }
+
+        .botin-4 {
+            grid-area: botin-4;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 420px) {
+    .foot-page {
+        width: 300px !important;
+        height: 50% !important;
+    }
+
+    .end {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .pie-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+}
+
+/*! SERVICIOS */
+
+@media screen and (max-width: 900px) {
+    .service-first {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .service-two {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .service-first img {
+        width: 80%;
+    }
+
+    .service-two img {
+        width: 80%;
+    }
+}
+
+/*! NOSOTROS */
+
+@media screen and (max-width: 1065px) {
+    .card-nos {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 6px 0px;
+        grid-auto-flow: row;
+        justify-items: center;
+        grid-template-areas:
+            "messi belligham"
+            "dibu tucu";
+    }
+
+    .messi {
+        grid-area: messi;
+    }
+
+    .belligham {
+        grid-area: belligham;
+    }
+
+    .dibu {
+        grid-area: dibu;
+    }
+
+    .tucu {
+        grid-area: tucu;
+    }
+
+    .card-nos2 {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 6px 0px;
+        grid-auto-flow: row;
+        justify-items: center;
+        grid-template-areas:
+            "cr7 arge"
+            "feme joaquin";
+    }
+
+    .cr7 {
+        grid-area: cr7;
+    }
+
+    .arge {
+        grid-area: arge;
+    }
+
+    .feme {
+        grid-area: feme;
+    }
+
+    .joaquin {
+        grid-area: joaquin;
+    }
+}
+
+
+
+@media screen and (max-width: 583px) {
+    .card-nos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 10px 0px;
+        grid-auto-flow: row;
+        justify-items: center;
+        grid-template-areas:
+            "messi"
+            "belligham"
+            "dibu"
+            "tucu";
+        width: 100%;
+    }
+
+    .messi {
+        grid-area: messi;
+    }
+
+    .belligham {
+        grid-area: belligham;
+    }
+
+    .dibu {
+        grid-area: dibu;
+    }
+
+    .tucu {
+        grid-area: tucu;
+    }
+
+    .card-nos2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 10px 0px;
+        grid-auto-flow: row;
+        justify-items: center;
+        grid-template-areas:
+            "cr7"
+            "arge"
+            "feme"
+            "joaquin";
+        width: 100%;
+    }
+
+    .cr7 {
+        grid-area: cr7;
+    }
+
+    .arge {
+        grid-area: arge;
+    }
+
+    .feme {
+        grid-area: feme;
+    }
+
+    .joaquin {
+        grid-area: joaquin;
+    }
+}
+
+/*! CONTACTOS */
+
+@media screen and (max-width: 1000px) {
+    .img-contact img {
+        height: 100%;
+        width: 700px;
+    }
+}
+
+@media screen and (max-width: 978px) {
+    .img-contact img {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 918px) {
+    .img-contact img {
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 855px) {
+    .img-contact img {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .img-contact img {
+        width: 400px;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 703px) {
+    .contactos-page {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-contact {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .img-contact img {
+        width: 100%;
+    }
+}
+
+/*! PRODUCTOS */
+@media screen and (max-width:1069px) {
+    .botines-nike-produ {
+        img {
+            width: 100% !important;
+        }
+    }
+
+    .pelota-nike-produ {
+        img {
+            width: 450px !important;
+        }
+    }
+}
+
+@media screen and (max-width:1047px) {
+    .card {
+        height: 90% !important;
+
+        p {
+            font-size: 21px !important;
+        }
+
+        h3 {
+            font-size: 24px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 948px) {
+    .card {
+        p {
+            font-size: 20px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .card-shirts {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 5px 5px;
+        grid-auto-flow: row;
+        justify-items: center;
+        grid-template-areas:
+            "belgrano arquero"
+            "nike puma";
+    }
+
+    .belgrano {
+        grid-area: belgrano;
+    }
+
+    .arquero {
+        grid-area: arquero;
+    }
+
+    .nike {
+        grid-area: nike;
+    }
+
+    .puma {
+        grid-area: puma;
+    }
+
+    .card {
+        height: 100% !important;
+    }
+
+    .productos-img {
+        display: grid !important;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "botines-produ"
+            "pelota-produ";
+        justify-items: center !important;
+
+        .botines-nike-produ {
+            img {
+                width: 450px;
+                text-align: center;
+            }
+        }
+    }
+
+    .botines-produ {
+        grid-area: botines-produ;
+    }
+
+    .pelota-produ {
+        grid-area: pelota-produ;
+    }
+
+    .productos-fondos2 {
+        img {
+            width: 620px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .img-productos-container {
+        height: 80% !important;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .productos-fondos2 {
+        img {
+            width: 540px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .productos-fondos2 {
+        img {
+            height: 320px !important;
+            width: 470px !important;
+        }
+    }
+
+}
+
+@media screen and (max-width: 490px) {
+    .productos-fondos2 {
+        img {
+            width: 410px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 467px) {
+    .productos-img {
+        img {
+            width: 400px !important;
+            height: 400px !important;
+        }
+    }
+
+    .card-shirts {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 5px 0px;
+        grid-auto-flow: row;
+        justify-items: center;
+        grid-template-areas:
+            "belgrano"
+            "arquero"
+            "nike"
+            "puma";
+    }
+
+    .belgrano {
+        grid-area: belgrano;
+    }
+
+    .arquero {
+        grid-area: arquero;
+    }
+
+    .nike {
+        grid-area: nike;
+    }
+
+    .puma {
+        grid-area: puma;
+    }
+}
+
+@media screen and (max-width: 462px) {
+    .productos-img {
+        margin: 0px !important;
+
+        img {
+            width: 350px !important;
+            height: 350px !important;
+        }
+    }
+
+    .img-productos-container {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+}
+
+@media screen and (max-width: 429px) {
+    .productos-img {
+        img {
+            width: 300px !important;
+            height: 300px !important;
+        }
+    }
+
+    .productos-fondos2 {
+        img {
+            width: 370px !important;
+            height: 280px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 406px) {
+    .img-productos-container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+@media screen and (max-width: 389px) {
+    .productos-fondos2 {
+        img {
+            width: 320px !important;
+            height: 250px !important;
+        }
+    }
+}

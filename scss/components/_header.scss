@@ -1,0 +1,38 @@
+header {
+    .navbar-container {
+        .navbar {
+            background-color: $header;
+
+            .container-fluid {
+                h1 {
+                    color: #f4f4f2;
+                    display: flex;
+                    text-align: center;
+                    font-size: 30px;
+                }
+
+                .offcanvas{
+                    background-color: $header !important;
+                }
+                .text-bg-dark{
+                    background-color: white;
+                }
+                .navbar-toggler {
+                    background-color: #243a69;
+                }
+
+                .imagenes {
+                    width: 70px;
+                }
+
+                .offcanvas-body {
+                    li {
+                        a {
+                            color: #f4f4f2 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
